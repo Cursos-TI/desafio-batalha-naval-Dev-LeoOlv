@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+  int main() {
+
+  int tabuleiro[5][5] = {0};
+
+  for (int i = 0; i < 3; i++) {
+        tabuleiro[i][0] = 1; // marca com 1 as posições do navio
+    }
+
+   // Navio horizontal (4 posições) começando em (4,1)
+    for (int j = 1; j < 5; j++) {
+        tabuleiro[4][j] = 1;
+    }
+
+  
+    // Exibir coordenadas de cada parte dos navios
+    printf("Coordenadas do Navio Vertical:\n");
+    for (int i = 0; i < 3; i++) {
+        printf("(%d, %d)\n", i, 0);
+    }
+
+    printf("\nCoordenadas do Navio Horizontal:\n");
+    for (int j = 1; j < 5; j++) {
+        printf("(%d, %d)\n", 4, j);
+    }
+
+    // Mostrar o tabuleiro (opcional, mas ajuda a visualizar)
+    printf("\nTabuleiro:\n");
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            printf("%d ", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
